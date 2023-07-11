@@ -1,0 +1,29 @@
+--create a store database
+CREATE table Gabs_Store (id INTEGER PRIMARY KEY, name TEXT, category TEXT, price INTEGER, aisle INTEGER);
+
+INSERT INTO Gabs_Store VALUES (1, "bananas", "produce", 0.72, 1);
+INSERT INTO Gabs_Store VALUES (2, "diapers", "baby", 28.99, 6);
+INSERT INTO Gabs_Store VALUES (3, "bread", "bakery", 3.99, 2);
+INSERT INTO Gabs_Store VALUES (4, "shampoo", "hygiene", 4.99, 9);
+INSERT INTO Gabs_Store VALUES (5, "body wash", "hygiene", 5.49, 9);
+INSERT INTO Gabs_Store VALUES (6, "ice cream", "frozen", 4.89, 11);
+INSERT INTO Gabs_Store VALUES (7, "butter", "dairy", 2.99, 5);
+INSERT INTO Gabs_Store VALUES (8, "milk", "dairy", 3.49, 5);
+INSERT INTO Gabs_Store VALUES (9, "cheese", "dairy", 3.65, 5);
+INSERT INTO Gabs_Store VALUES (10, "ketchup", "condiment", 3.25, 8);
+INSERT INTO Gabs_Store VALUES (11, "flour", "baking supplies", 2.95, 4);
+INSERT INTO Gabs_Store VALUES (12, "cereal", "dry goods", 4.79, 9);
+INSERT INTO Gabs_Store VALUES (13, "sugar", "baking supplies", 2.65, 4);
+INSERT INTO Gabs_Store VALUES (14, "ground beef", "meat", 6.64, 10);
+INSERT INTO Gabs_Store VALUES (15, "chicken breast", "meat", 6.47, 10);
+
+--display database ordered by price.
+SELECT * from Gabs_Store ORDER BY price asc;
+
+--what is the average price for somethingin the dairy category?
+SELECT avg(price)
+FROM Gabs_Store where category='dairy';
+
+--how many items are sold in the store?
+SELECT COUNT(name) 
+FROM Gabs_Store;
