@@ -24,6 +24,6 @@ SELECT * from Gabs_Store ORDER BY price asc;
 SELECT avg(price)
 FROM Gabs_Store where category='dairy';
 
---how many items are sold in the store?
+--how many items are listed in this database?
 SELECT COUNT(name) 
 FROM Gabs_Store;
